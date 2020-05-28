@@ -23,12 +23,12 @@ export const SocketTest = () => {
     useEffect(() => {
         socket.on('connect', (dataJson)=> {
             const { data } = JSON.parse(dataJson);
-            console.log(data);
+            console.log(data); // set data
         });
 
         socket.on('disconnect', (dataJson) => {
             const { data } = JSON.parse(dataJson);
-            console.log(data);
+            console.log(data);// set data
         });
 
         return () => {
